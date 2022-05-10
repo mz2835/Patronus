@@ -1,7 +1,5 @@
-# Meow-Meow---ELEN6883-project
-Yihan Zhu yz4152
-Mengdie Zhang mz2835 
-Youhan Li yl4840 
+#  ELEN6883 course project: Meow-Meow
+Created by Yihan Zhu - yz4152, Mengdie Zhang - mz2835 and Youhan Li - yl4840 
 
 ## steps for deployment and use
 
