@@ -14,7 +14,7 @@
     background-repeat: no-repeat;
 }
 .zombies-hero.no-webp {
-    background-image: url(./bg_test.png);
+    background-image: url(./beijing.jpg);
     /* background-image: url(./index_bg.png); */
 }
 .zombies-hero {
@@ -109,10 +109,10 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 /*  主页下半截 */
 #root{
-  background: url(./my_bg1.png);
-  background-size: cover;
+  background: url(./xiabeijing2.jpg);
+  background-size: contain;
   /* background-color: rgba(224, 156, 156, 0.535); */
-  background-position: 50%;
+  /*background-position: 50%;*/
 }
 .zombie-container {
     padding-top: 0px;
@@ -123,7 +123,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 }
 
 .zombie-container .area{
-    background-color: rgba(250, 248, 248, 0.5);
+    background-color: rgba(255, 252, 252, 0.5);
     padding: 20px; 
     height: min-content;
 }
@@ -152,7 +152,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 }
 /*  所有猫咪 背景框 */
 .home-card{
-    background-image: url(./biankuang.png);
+    background-image: url(./kuang.jpg);
     background-repeat: no-repeat;
 }
 .game-card {
@@ -177,7 +177,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
     
     display: flex!important;
     /* color: unset; */
-    /* color:rgb(227, 212, 212) */
+    color:rgb(29, 20, 20);
 }
 /* 所有猫咪 卡里猫咪的位置 */
 .game-card .zombie-parts{
@@ -191,15 +191,15 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
     left: 50%;
     top: 51vh;
     font-size: 40px;
+    color: rgb(128, 37, 37);
     width: 48vh;
     margin-left: -8vh;
     text-align: center;
-    /* color: rgb(51, 38, 25); */
     transform: scale(1);
-    background-color: rgba(214, 184, 169, 0.725)!important;
+    background-color: rgba(99, 86, 147, 0.725)!important;
 }
 .card-header:first-child {
-    background-color: aqua;
+    background-color: rgb(26, 57, 57);
     border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
 }
 .hide-overflow-text {
@@ -208,11 +208,11 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
     white-space: nowrap;
     overflow: hidden;
     /* background-color: rgba(248, 205, 198)!important;; */
-    color:rgba(38, 28, 23, 0.994)
+    color:rgba(0, 0, 0, 0.994)
 }
 /* ？  */
 .bg-dark {
-    background-color: rgb(240, 230, 230)!important;
+    background-color: rgb(95, 28, 28)!important;
 }
 .game-card[active='1'] {
     transform: rotate(5deg);
@@ -239,7 +239,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 /* detail page 信息框背景颜色 */
 .zombie-detail dl{
     display: inline-block;
-    background-color: rgba(253, 238, 238, 0.725)!important;
+    background-color: rgba(215, 175, 111, 0.725)!important;
     padding: 30px 0px;
 }
 /* detail page 框里文字相关属性 */
@@ -310,8 +310,8 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
     line-height: 30px;
     font-size: 28px;
     text-align: center;
-    background-color: rgb(243, 222, 187);
-    color: rgb(159, 111, 60);
+    background-color: rgb(179, 136, 61);
+    color: rgb(0, 0, 0);
     padding: 10px;
     border: 5px solid rgb(15, 15, 15);
 }
@@ -331,14 +331,14 @@ button a,button a:hover{
     margin-top: 0px;
     padding-top: 0px;
 }
-.target-card{
+/* .target-card{
     transform: none;
     background-image: url(./biankuang.png);
     background-size: 85%;
     background-repeat: no-repeat;
     background-position: center;
     padding-top: 100px;
-}
+} */
 .target-card:hover{
     transform: none;
 }
@@ -381,7 +381,7 @@ button a,button a:hover{
     cursor: pointer;
     /* background: url(./button.png); */
     /* background-color: moccasin; */
-    background-color: rgba(250, 230, 230, 0.5);
+    background-color: rgba(190, 175, 175, 0.5);
     border: 5px solid rgba(60, 64, 40, 0.994);
     border-radius: 45px;
     background-position: top;
