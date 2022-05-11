@@ -43,15 +43,15 @@ class CatPreview extends Component  {
                         <img alt="" src="./head-6@2x.png" className="head head-part-6" style={_style['skin']}/>
                         <img alt="" src="./head-7@2x.png" className="head head-part-7" style={_style['skin']}/>
                         <img alt="" src="./head-8@2x.png" className="head head-part-8" style={_style['skin']}/> */}
-                        <img alt="" src="./cat1.png" className="head head-part-1" style={_style['skin']}/>
-                        <img alt="" src="./cat2.png" className="head head-part-2" style={_style['skin']}/>
-                        <img alt="" src="./cat3.png" className="head head-part-3" style={_style['skin']}/>
-                        <img alt="" src="./cat4.png" className="head head-part-4" style={_style['skin']}/>
-                        <img alt="" src="./cat5.png" className="head head-part-5" style={_style['skin']}/>
-                        <img alt="" src="./cat6.png" className="head head-part-6" style={_style['skin']}/>
-                        <img alt="" src="./cat7.png" className="head head-part-7" style={_style['skin']}/>
-                        <img alt="" src="./cat8.png" className="head head-part-8" style={_style['skin']}/>
-                        <img alt="" src="./cat9.png" className="head head-part-9" style={_style['skin']}/> 
+                        <img alt="" src="./black and white.png" className="head head-part-1" style={_style['skin']}/>
+                        <img alt="" src="./dragon.png" className="head head-part-2" style={_style['skin']}/>
+                        <img alt="" src="./weasel.png" className="head head-part-3" style={_style['skin']}/>
+                        <img alt="" src="./hippogriff.png" className="head head-part-4" style={_style['skin']}/>
+                        <img alt="" src="./lion.png" className="head head-part-5" style={_style['skin']}/>
+                        <img alt="" src="./robin.png" className="head head-part-6" style={_style['skin']}/>
+                        <img alt="" src="./thestral.png" className="head head-part-7" style={_style['skin']}/>
+                        <img alt="" src="./tonkinese.png" className="head head-part-8" style={_style['skin']}/>
+                        <img alt="" src="./vole.png" className="head head-part-9" style={_style['skin']}/> 
                         
                         {/* <img alt="" src="./head-2@2x.png" className="head head-part-2" style={_style['skin']}/> */}
                     </div>

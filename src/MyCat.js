@@ -101,7 +101,7 @@ class MyCat extends Component {
                             <input 
                                 type="text" 
                                 id='catName' 
-                                placeholder='Give your Kitty a name' 
+                                placeholder='Pick a name' 
                                 ref={(input)=>{this.input=input}} 
                                 value={this.state.catName}
                                 onChange={this.inputChange}>
@@ -110,7 +110,7 @@ class MyCat extends Component {
                         <div>
                             <button className="attack-btn" onClick={this.buyCat}>
                                 <span>
-                                    Buy a kitty    
+                                    Buy a Patronus    
                                 </span>
                             </button>
                         </div>
@@ -126,7 +126,7 @@ class MyCat extends Component {
                         <input 
                             type="text" 
                             id='catName' 
-                            placeholder='Give your Kitty a name' 
+                            placeholder='Pick a name' 
                             ref={(input)=>{this.input=input}} 
                             value={this.state.catName}
                             onChange={this.inputChange}>
@@ -135,7 +135,7 @@ class MyCat extends Component {
                     <div>
                         <button className="attack-btn" onClick={this.createCat}>
                             <span>
-                                Adopt a kitty   
+                                Adopt a Patronus   
                             </span>
                         </button>
                     </div>

@@ -60,19 +60,19 @@ class App extends Component {
                                 <ul>
                                     <li>
                                         <button className="start-course-btn">
-                                            <span><Link to="?CatGarten">Kittygarten</Link></span>
+                                            <span><Link to="?CatGarten">Patronus Kingdom</Link></span>
                                         </button>
                                     </li> 
 
                                     <li>
                                         <button className="start-course-btn">
-                                            <span><Link to="?MyCat">My Kitty</Link></span>
+                                            <span><Link to="?MyCat">My Patronus</Link></span>
                                         </button>
                                     </li>
 
                                     <li>
                                         <button className="start-course-btn">
-                                            <span><Link to="?CatMarket">KittyMarket</Link></span>
+                                            <span><Link to="?CatMarket">Patronus Market</Link></span>
                                         </button>
                                     </li>
 

@@ -84,6 +84,7 @@ const MyWeb3 ={
     },
     //创建随机僵尸
     createCat(_name){
+        console.log(window.MyContract)
         return new Promise((resolve, reject) => {
             window.MyContract.methods.createRandomCat(_name).send({from:window.defaultAccount})
             .on('transactionHash', function(transactionHash){
