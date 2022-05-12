@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-import CatGarten from "./CatGarten"
-import MyCat from "./MyCat"
-import CatDetail from "./CatDetail"
+import PatronusKingdom from "./PatronusKingdom"
+import MyPatronus from "./MyPatronus"
+import PatronusDetail from "./PatronusDetail"
 
-import  CatMarket  from "./CatMarket"
-import CatFriend from "./CatFriend";
+import  PatronusMarket  from "./PatronusMarket"
+import PatronusFriend from "./PatronusFriend";
 import ContractAdmin from "./ContractAdmin"
 
 class Page extends Component {
@@ -22,7 +22,7 @@ class Page extends Component {
         if(nextProps!==this.props){
             this.setState({nextProps})
             let search = nextProps.location.search.replace(/\?/,'').split("&")
-            let page = search[0] === '' ?  'CatGarten' : search[0]
+            let page = search[0] === '' ?  'PatronusKingdom' : search[0]
             this.setState({page:page})
             return true
         }else{
@@ -33,22 +33,22 @@ class Page extends Component {
         switch (this.state.page){
 
 
-            case 'CatGarten':
-                return(<CatGarten></CatGarten>)
-            case 'MyCat':
-                return(<MyCat></MyCat>)
-            case 'CatMarket':
-                return(<CatMarket></CatMarket>)
+            case 'PatronusKingdom':
+                return(<PatronusKingdom></PatronusKingdom>)
+            case 'MyPatronus':
+                return(<MyPatronus></MyPatronus>)
+            case 'PatronusMarket':
+                return(<PatronusMarket></PatronusMarket>)
  
-            case 'CatDetail':
-                return(<CatDetail></CatDetail>)
-            case 'CatFriend':
-                return(<CatFriend></CatFriend>)
+            case 'PatronusDetail':
+                return(<PatronusDetail></PatronusDetail>)
+            case 'PatronusFriend':
+                return(<PatronusFriend></PatronusFriend>)
 
             case 'ContractAdmin':
                 return(<ContractAdmin></ContractAdmin>)
             default:
-                return(<CatGarten></CatGarten>)
+                return(<PatronusKingdom></PatronusKingdom>)
         }
     }
 }

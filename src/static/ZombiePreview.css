@@ -529,7 +529,7 @@ textarea.form-control {
 }
 
 .bg-dark {
-  background-color: rgb(242, 225, 225) !important;
+  background-color: rgba(247, 247, 247, 0.963) !important;
 }
 
 a.bg-dark:focus,

@@ -60,33 +60,29 @@ class App extends Component {
                                 <ul>
                                     <li>
                                         <button className="start-course-btn">
-                                            <span><Link to="?CatGarten">Patronus Kingdom</Link></span>
+                                            <span><Link to="?PatronusKingdom">Patronus Kingdom</Link></span>
                                         </button>
                                     </li> 
 
                                     <li>
                                         <button className="start-course-btn">
-                                            <span><Link to="?MyCat">My Patronus</Link></span>
+                                            <span><Link to="?MyPatronus">My Patronus</Link></span>
                                         </button>
                                     </li>
 
                                     <li>
                                         <button className="start-course-btn">
-                                            <span><Link to="?CatMarket">Patronus Market</Link></span>
+                                            <span><Link to="?PatronusMarket">Patronus Market</Link></span>
                                         </button>
                                     </li>
 
-                                    {/* <li>
-                                        <button className="start-course-btn">
-                                            <span><Link to="?ZombieSimulator">Simu</Link></span>
-                                        </button>
-                                    </li>  */}
+                                
                                     <AdminArea></AdminArea> 
                                 </ul>
                             </div>
                         </div>
                     </section>
-                    {/* 下半截 僵尸preview */}
+                    {/* 下半截 preview */}
                     <section className="zombie-container block bg-walls no-webp">
                         <div className="container">
                             <div className="area">
