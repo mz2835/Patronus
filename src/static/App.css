@@ -1,0 +1,436 @@
+
+@media (min-width: 576px){
+    .block {
+        padding: 120px 1rem;
+    }
+}
+.block {
+    position: relative;
+    padding: 30px 2px;
+
+    color: inherit;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.zombies-hero.no-webp {
+    background-image: url(./beijing.jpg);
+    /* background-image: url(./index_bg.png); */
+}
+.zombies-hero {
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-size: 100% auto;
+}
+.pt-5 {
+    padding-top: 3rem!important;
+    
+}
+.pb-0 {
+    padding-bottom: 0!important;
+}
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+.zombies-hero .container {
+    padding-top: 35%;
+    text-align: center;
+    max-width: 1260px;
+    overflow: auto;
+    display: -webkit-box;
+}
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 100%;
+}
+.zombies-hero .menu {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding-top: 20px; 
+    padding-bottom: 20px;
+    height: min-content;
+    display: flex;
+    width: 100%;
+}
+.zombies-hero .menu ul {
+    width: 100%;
+    display: flex;
+}
+.zombies-hero a {
+   color: #fff;
+}
+.zombies-hero a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.zombies-hero .menu li {
+    width: 66%;
+}
+/* 登陆界面 四个按钮 */
+.start-course-btn:active {
+    /* background: url(./learn_more_btn.png); */
+    background-size: 100% 100%;
+    background-color: rgba(131, 127, 124, 0.5);
+}
+.start-course-btn:hover {
+    /* background: url(./learn_more_btn.png); */
+    transition: all .4s ease 0s;
+    background-size: 100% 100%;
+    background-color: rgba(186, 183, 179, 0.5);
+    transform: scale(1.2);
+
+}
+
+.start-course-btn {
+    cursor: pointer;
+    /* background: url(./learn_more_btn.png); */
+    background-position: top;
+    background-size: 100% 100%;
+    background-color: rgba(250, 248, 248, 0.5);
+    border: 5px solid rgba(25, 24, 24, 0.994);
+    outline: none;
+    
+    font-family: soleil,fantasy;
+    font-size: 30px;
+    text-shadow: 0 2px 7px rgb(111, 83, 17);
+    color: rgb(64, 59, 22);
+    padding: 20px 50px;
+}
+
+[type=reset], [type=submit], button, html [type=button] {
+    -webkit-appearance: button;
+}
+
+/*  主页下半截 */
+#root{
+  background: url(./xiabeijing2.jpg);
+  background-size: cover;
+  /* background-color: rgba(224, 156, 156, 0.535); */
+  background-position: 50%;
+}
+.zombie-container {
+    padding-top: 0px;
+}
+.zombie-container .container{
+    text-align: center;
+    max-width: 1250px;
+}
+
+.zombie-container .area{
+    background-color: rgba(250, 248, 248, 0.632);
+    padding: 20px; 
+    height: min-content;
+}
+
+.start-admin-btn:hover {
+  -webkit-transition: all .6s ease 0s;
+  transition: all .6s ease 0s;
+  -webkit-filter: brightness(130%);
+  filter: brightness(130%);
+}
+/* 付钱按钮 */
+.start-admin-btn {
+    cursor: pointer;
+    /* background: url(./learn_more_btn.png); */
+    background-position: 50% 20px;
+    background-size: 90%;
+    background-color: rgba(124, 117, 109, 0.5);
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+    font-family: soleil,sans-serif;
+    font-size: 20px;
+    text-shadow: 0 2px 7px #000;
+    color: #fff;
+    padding: 40px 65px;
+}
+/*  所有猫咪 背景框 */
+.home-card{
+    background-image: url(./kuang.jpg);
+    background-repeat: no-repeat;
+}
+.game-card {
+    height: 42vh;
+    width: 29vh;
+    margin: -1rem;
+    background-size: 100%;
+    position: relative;
+    transform: scale(.8);
+    cursor: pointer;
+    transition: transform 0.5s;
+    
+}
+.cards{
+    justify-content: space-around!important;
+    flex-wrap: wrap!important;
+    display: flex!important;
+    
+}
+/* 设置小卡里姓名的颜色 */
+.cards a{
+    
+    display: flex!important;
+    /* color: unset; */
+    /* color:rgb(227, 212, 212) */
+}
+/* 所有猫咪 卡里猫咪的位置 */
+.game-card .zombie-parts{
+    margin-left: 0vh;
+    margin-top: 38vh; 
+    transform: scale(1.5); 
+}
+/* 所有猫咪 姓名卡位置 */
+.zombie-card {
+    position: absolute;
+    left: 50%;
+    top: 51vh;
+    font-size: 40px;
+    width: 48vh;
+    margin-left: -8vh;
+    text-align: center;
+    /* color: rgb(51, 38, 25); */
+    transform: scale(1);
+    background-color: rgba(200, 197, 192, 0.725)!important;
+}
+.card-header:first-child {
+    background-color: aqua;
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+}
+.hide-overflow-text {
+    
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    /* background-color: rgba(248, 205, 198)!important;; */
+    color:rgba(83, 81, 81, 0.994)
+}
+/* ？  */
+.bg-dark {
+    background-color: rgb(164, 157, 157)!important;
+}
+.game-card[active='1'] {
+    transform: rotate(5deg);
+}
+.game-card[active='0'] {
+    transform: rotate(0deg);
+    transform: scale(.8);
+}
+.game-card:hover {
+    transform: rotate(5deg);
+}
+.zombie-detail{
+    padding-top: 1.5rem !important;
+    position: relative;
+    width: 70%;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+    flex-basis: 0px;
+    flex-grow: 1;
+    max-width: 100%;
+    margin-top: -3vh;
+}
+/* detail page 信息框背景颜色 */
+.zombie-detail dl{
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.5)!important;
+    padding: 30px 0px;
+}
+/* detail page 框里文字相关属性 */
+.zombie-detail dt,dd{
+    float:left;
+    font-size:  18px;
+    
+    color: #000;
+    padding: 10px 0px;
+}
+.zombie-detail dt{
+    font-size:  20px;
+    font-family: fantasy;
+    color: #000;
+    width: 30%;
+}
+.zombie-detail dd{
+    width: 70%;
+}
+.zombie-detail dl>:first-child,.zombie-detail dl>:last-child{
+
+    width: 100%;
+}
+.zombie-detail dl>:last-child{
+    margin-top: 30px;
+}
+
+/*  attack  */
+
+.attack-btn:hover {
+    -webkit-transition: all .6s ease 0s;
+    transition: all .6s ease 0s;
+    /* -webkit-filter: brightness(70%); */
+    /* filter: brightness(130%); */
+    background-color: rgb(188, 186, 183);
+    
+}
+.attack-btn {
+    cursor: pointer;
+    /* background: url(./start_btn.png); */
+    background-position: top;
+    background-size: 100%;
+    background-color: rgba(245, 242, 237, 0.5);
+    border: 5px solid rgba(90, 67, 56, 0.994);
+    border-radius: 45px;
+    /* background-color: transparent;
+    border: none; */
+    outline: none;
+    font-family: soleil,fantasy;
+    font-size: 40px;
+    /* text-shadow: 0 2px 7px rgb(127, 80, 80); */
+    text-shadow: 0 2px 7px rgb(111, 83, 17);
+    color: rgb(64, 59, 22);
+    /* color: rgb(159, 111, 60); */
+    height: 77px;
+    width: 400px;
+    margin-top: 50px;
+}
+.attack-btn span{
+    margin-top: 10px;
+    display: block;
+
+}
+.zombieInput{
+    margin: 30px 0px;
+    width: 100%;
+}
+.zombieInput input{
+    width: 300px;
+    line-height: 30px;
+    font-size: 28px;
+    text-align: center;
+    background-color: rgba(228, 239, 247, 0.975);
+    /* text-shadow: 0 2px 7px rgb(111, 83, 17); */
+    color: rgb(64, 59, 22);
+    /* color: rgb(159, 111, 60); */
+    padding: 10px;
+    border: 5px solid rgb(15, 15, 15);
+}
+button a,button a:hover{
+    color: unset!important;
+    text-decoration: none!important;
+    background: none;
+}
+.flex{
+    display: flex!important;
+}
+
+.zombie-attack .zombie-preview {
+    transform: scale(0.5);
+}
+.zombie-attack .zombie-detail{
+    margin-top: 0px;
+    padding-top: 0px;
+}
+.target-card{
+    transform: none;
+    background-image: url(./kuang.jpg);
+    background-size: 85%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 100px;
+}
+.target-card:hover{
+    transform: none;
+}
+
+.pay-btn:hover {
+    -webkit-transition: all .6s ease 0s;
+    transition: all .6s ease 0s;
+    /* -webkit-filter: brightness(130%);
+    filter: brightness(130%); */
+    transform: scale(1.2);
+}
+.pay-btn {
+    cursor: pointer;
+    /* background: url(./button.png); */
+    /* background-color: moccasin; */
+    background-color: rgba(201, 198, 198, 0.5);
+    border: 5px solid rgba(60, 64, 40, 0.994);
+    border-radius: 45px;
+    background-position: top;
+    background-size: 100%;
+    /* background-color: transparent; */
+    /* border: none; */
+    outline: none;
+    font-family: soleil,fantasy;
+    font-size: 20px;
+    text-shadow: 0 2px 5px #000;
+    color: rgb(60,64,40);
+    height: 50px;
+    width: 300px;
+    margin-top: 50px;
+}
+.pay-btn-last {
+    margin-top: 0px;
+}
+.pay-btn span{
+    margin-top: 10px;
+    display: block;
+
+}
+
+
+.zombie-simulator .zombie-parts{
+    width: 50%;
+    margin-top: 16vh;
+}
+.zombie-simulator .zombie-preview{
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center top;
+}
+.transactionHash{
+    display: none;
+}
+.transactionHash[display='1']{
+    display: block;
+}
+.buyArea[display='0'],.createArea[display='0']{
+    display: none;
+}
+.buyArea[display='1'],.createArea[display='1']{
+    display: block;
+}
+.contract-admin dl{
+    display: flex;
+    flex-wrap: wrap;
+}
+.contract-admin dt{
+    width: 30%;
+    padding: 10px 0px;
+}
+.contract-admin dd{
+    width: 70%;
+    font-family: auto;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.contract-admin .pay-btn{
+    height: 40px;
+    width: 105px;
+    font-size: 14px;
+    background-position: 0px 8px;
+    background-repeat: no-repeat;
+    margin-left: 20px;
+}
+.contract-admin .pay-btn span{
+    margin-top: 15px;
+}
+.lowcase{
+    text-transform: lowercase;
+}
+ 
