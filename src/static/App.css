@@ -9,7 +9,7 @@
     padding: 30px 2px;
 
     color: inherit;
-    background-position: 50%;
+    background-position: 60%;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -20,7 +20,7 @@
 .zombies-hero {
     background-repeat: no-repeat;
     background-position: center top;
-    background-size: cover;
+    background-size: contain;
     background-size: 100% auto;
 }
 .pt-5 {
@@ -51,19 +51,20 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
     width: 100%;
 }
 .zombies-hero .menu {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(80, 92, 110, 0.72);
     padding-top: 20px; 
     padding-bottom: 20px;
     height: min-content;
     display: flex;
     width: 100%;
+    border-radius: 12px;
 }
 .zombies-hero .menu ul {
     width: 100%;
     display: flex;
 }
 .zombies-hero a {
-   color: #fff;
+   color: rgb(255, 255, 255);
 }
 .zombies-hero a:hover {
     color: #fff;
@@ -76,14 +77,15 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 .start-course-btn:active {
     /* background: url(./learn_more_btn.png); */
     background-size: 100% 100%;
-    background-color: rgba(131, 127, 124, 0.5);
+    background-color: rgba(17, 34, 62, 0.531);
 }
 .start-course-btn:hover {
     /* background: url(./learn_more_btn.png); */
     transition: all .4s ease 0s;
     background-size: 100% 100%;
-    background-color: rgba(186, 183, 179, 0.5);
+    background-color: rgba(13, 28, 50, 0.531);
     transform: scale(1.2);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 
 }
 
@@ -91,16 +93,17 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
     cursor: pointer;
     /* background: url(./learn_more_btn.png); */
     background-position: top;
-    background-size: 100% 100%;
-    background-color: rgba(250, 248, 248, 0.5);
-    border: 5px solid rgba(25, 24, 24, 0.994);
+    background-size: 90% 90%;
+    background-color: rgba(8, 16, 29, 0.822);
+    border: 12px solid rgba(36, 60, 100, 0.077);
+    border-radius: 12px;
     outline: none;
     
     font-family: soleil,fantasy;
-    font-size: 30px;
-    text-shadow: 0 2px 7px rgb(111, 83, 17);
-    color: rgb(64, 59, 22);
-    padding: 20px 50px;
+    font-size: 22px;
+    text-shadow: 0 2px 7px rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    padding: 20px 40px;
 }
 
 [type=reset], [type=submit], button, html [type=button] {
@@ -123,7 +126,8 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 }
 
 .zombie-container .area{
-    background-color: rgba(250, 248, 248, 0.632);
+    background-color: rgba(108, 122, 144, 0.72);
+    border-radius: 15px 50px;
     padding: 20px; 
     height: min-content;
 }
@@ -154,6 +158,8 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 .home-card{
     background-image: url(./kuang.jpg);
     background-repeat: no-repeat;
+    box-shadow: 0 4px 8px 0 rgba(222, 222, 222, 0.2), 0 6px 20px 0 rgba(8, 8, 8, 0.871);
+    text-align: center;
 }
 .game-card {
     height: 42vh;
@@ -166,6 +172,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
     transition: transform 0.5s;
     
 }
+/*随卡数改变背景大小*/
 .cards{
     justify-content: space-around!important;
     flex-wrap: wrap!important;
@@ -173,11 +180,10 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
     
 }
 /* 设置小卡里姓名的颜色 */
-.cards a{
-    
-    display: flex!important;
-    /* color: unset; */
-    /* color:rgb(227, 212, 212) */
+.cards a{   
+    display: flex!important; 
+    /* color: unset; 
+    color:rgb(227, 212, 212);*/
 }
 /* 所有猫咪 卡里猫咪的位置 */
 .game-card .zombie-parts{
@@ -185,7 +191,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
     margin-top: 38vh; 
     transform: scale(1.5); 
 }
-/* 所有猫咪 姓名卡位置 */
+/* 所有姓名卡位置 */
 .zombie-card {
     position: absolute;
     left: 50%;
@@ -194,25 +200,29 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
     width: 48vh;
     margin-left: -8vh;
     text-align: center;
-    /* color: rgb(51, 38, 25); */
+    /*color: rgba(51, 38, 25, 0);*/
     transform: scale(1);
-    background-color: rgba(200, 197, 192, 0.725)!important;
+    background-color: transparent!important;
 }
 .card-header:first-child {
-    background-color: aqua;
+    /*background-color: rgba(255, 255, 255, 0.969);*/
     border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
 }
 .hide-overflow-text {
-    
+    background-color: transparent;
+    font-family: soleil,fantasy;
+    text-shadow: 0 0 0.6em rgb(148, 150, 153);
+    font-size:  56px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
     /* background-color: rgba(248, 205, 198)!important;; */
-    color:rgba(83, 81, 81, 0.994)
+    color:rgba(255, 255, 255, 0.994);
 }
 /* ？  */
 .bg-dark {
-    background-color: rgb(164, 157, 157)!important;
+    /*background-color: rgb(255, 255, 255)!important;*/
+    background-color: transparent;
 }
 .game-card[active='1'] {
     transform: rotate(5deg);
@@ -225,10 +235,10 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
     transform: rotate(5deg);
 }
 .zombie-detail{
-    padding-top: 1.5rem !important;
+    padding-top: 2rem !important;
     position: relative;
     width: 70%;
-    min-height: 1px;
+    min-height: 5px;
     padding-right: 10px;
     padding-left: 10px;
     flex-basis: 0px;
@@ -239,20 +249,23 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 /* detail page 信息框背景颜色 */
 .zombie-detail dl{
     display: inline-block;
-    background-color: rgba(255, 255, 255, 0.5)!important;
-    padding: 30px 0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.186), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(255, 255, 255, 0.291)!important;
+    border-radius: 12px;
+    padding: 10px 0px;
 }
 /* detail page 框里文字相关属性 */
 .zombie-detail dt,dd{
     float:left;
     font-size:  18px;
-    
+    font-family: soleil,fantasy;
     color: #000;
     padding: 10px 0px;
 }
 .zombie-detail dt{
+    font-family: soleil,fantasy;
     font-size:  20px;
-    font-family: fantasy;
+    font-weight:bold;
     color: #000;
     width: 30%;
 }
@@ -282,22 +295,23 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
     /* background: url(./start_btn.png); */
     background-position: top;
     background-size: 100%;
-    background-color: rgba(245, 242, 237, 0.5);
-    border: 5px solid rgba(90, 67, 56, 0.994);
-    border-radius: 45px;
+    background-color: rgba(8, 16, 29, 0.822);
+    border: 5px solid rgba(36, 60, 100, 0.077);
+    border-radius: 12px;
     /* background-color: transparent;
     border: none; */
     outline: none;
     font-family: soleil,fantasy;
-    font-size: 40px;
+    font-size: 30px;
     /* text-shadow: 0 2px 7px rgb(127, 80, 80); */
-    text-shadow: 0 2px 7px rgb(111, 83, 17);
-    color: rgb(64, 59, 22);
+    text-shadow: 0 2px 7px rgb(62, 129, 161);
+    color: rgb(255, 255, 255);
     /* color: rgb(159, 111, 60); */
     height: 77px;
-    width: 400px;
+    width: 300px;
     margin-top: 50px;
 }
+
 .attack-btn span{
     margin-top: 10px;
     display: block;
@@ -308,16 +322,17 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
     width: 100%;
 }
 .zombieInput input{
+    font-family: soleil,fantasy;
     width: 300px;
     line-height: 30px;
     font-size: 28px;
     text-align: center;
-    background-color: rgba(228, 239, 247, 0.975);
+    background-color: rgba(224, 226, 228, 0.705);
     /* text-shadow: 0 2px 7px rgb(111, 83, 17); */
-    color: rgb(64, 59, 22);
+    color: rgb(19, 29, 59);
     /* color: rgb(159, 111, 60); */
     padding: 10px;
-    border: 5px solid rgb(15, 15, 15);
+
 }
 button a,button a:hover{
     color: unset!important;
@@ -358,9 +373,9 @@ button a,button a:hover{
     cursor: pointer;
     /* background: url(./button.png); */
     /* background-color: moccasin; */
-    background-color: rgba(201, 198, 198, 0.5);
-    border: 5px solid rgba(60, 64, 40, 0.994);
-    border-radius: 45px;
+    background-color: rgba(8, 16, 29, 0.822);
+    border: 5px solid rgba(36, 60, 100, 0.077);
+    border-radius: 25px;
     background-position: top;
     background-size: 100%;
     /* background-color: transparent; */
@@ -369,10 +384,19 @@ button a,button a:hover{
     font-family: soleil,fantasy;
     font-size: 20px;
     text-shadow: 0 2px 5px #000;
-    color: rgb(60,64,40);
+    color: rgb(255, 255, 255);
     height: 50px;
     width: 300px;
     margin-top: 50px;
+}
+.pay-btn:hover {
+    /* background: url(./learn_more_btn.png); */
+    transition: all .4s ease 0s;
+    background-size: 100% 100%;
+    background-color: rgba(13, 28, 50, 0.531);
+    transform: scale(1.2);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
 }
 .pay-btn-last {
     margin-top: 0px;
