@@ -76,6 +76,12 @@ class App extends Component {
                                         </button>
                                     </li>
 
+                                    <li>
+                                        <button className="start-course-btn">
+                                            <span><Link to="?Gacha">Patronus Gacha</Link></span>
+                                        </button>
+                                    </li>
+
                                 
                                     <AdminArea></AdminArea> 
                                 </ul>

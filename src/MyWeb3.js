@@ -46,7 +46,7 @@ const MyWeb3 ={
             })
         })
     },
-    //僵尸总量
+    //Patronus总量
     patronusCount() {
         return new Promise((resolve, reject) => {
             window.MyContract.methods.catCount().call().then(function(patronusCount) {
@@ -54,7 +54,7 @@ const MyWeb3 ={
             })
         })
     },
-    //获得单个僵尸数据
+    //获得单个Patronus数据
     patronuss(patronusId){
         return new Promise((resolve, reject) => {
             if(patronusId>=0){
@@ -64,7 +64,7 @@ const MyWeb3 ={
             }
         })
     },
-    //获得僵尸拥有者地址
+    //获得Patronus拥有者地址
     patronusToOwner(patronusId){
         return new Promise((resolve, reject) => {
             if(patronusId>=0){
@@ -74,7 +74,7 @@ const MyWeb3 ={
             }
         })
     },
-    //获得当前用户的所有僵尸id
+    //获得当前用户的所有Patronus id
     getPatronussByOwner(){
         return new Promise((resolve, reject) => {
             window.MyContract.methods.getCatsByOwner(window.defaultAccount).call().then(function(patronuss) {
@@ -82,7 +82,7 @@ const MyWeb3 ={
             })
         })
     },
-    //创建随机僵尸
+    //创建随机Patronus
     createPatronus(_name){
         return new Promise((resolve, reject) => {
             window.MyContract.methods.createRandomCat(_name).send({from:window.defaultAccount})
@@ -102,7 +102,7 @@ const MyWeb3 ={
             })
         })
     },
-    //购买僵尸
+    //购买Patronus
     buyPatronus(_name){
         return new Promise((resolve, reject) => {
             window.MyContract.methods.catPrice().call().then(function(patronusPrice) {
@@ -164,27 +164,8 @@ const MyWeb3 ={
             })
         })
     },
-    //僵尸对战
-    // attack(_catId,_targetId){
-    //     return new Promise((resolve, reject) => {
-    //         window.MyContract.methods.attack(_catId,_targetId).send({from:window.defaultAccount})
-    //         .on('transactionHash', function(transactionHash){
-    //             resolve(transactionHash)
-    //         })
-    //         .on('confirmation', function(confirmationNumber, receipt){
-    //             console.log({confirmationNumber:confirmationNumber,receipt:receipt})
-    //         })
-    //         .on('receipt', function(receipt){
-    //             console.log({receipt:receipt})
-    //             window.location.reload()
-    //         })
-    //         .on('error', function(error,receipt){
-    //             console.log({error:error,receipt:receipt})
-    //             reject({error:error,receipt:receipt})
-    //         })
-    //     })
-    // },
-    //僵尸改名
+
+    //Patronus改名
     changeName(_patronusId,_name){
         return new Promise((resolve, reject) => {
             window.MyContract.methods.changeName(_patronusId,_name).send({from:window.defaultAccount})
@@ -204,7 +185,7 @@ const MyWeb3 ={
             })
         })
     },
-    //僵尸喂食
+    //Patronus喂食
     feed(_patronusId){
         return new Promise((resolve, reject) => {
             window.MyContract.methods.feed(_patronusId).send({from:window.defaultAccount})
@@ -224,7 +205,7 @@ const MyWeb3 ={
             })
         })
     },
-    //僵尸付费升级
+    //Patronus付费升级
     levelUp(_patronusId){
         return new Promise((resolve, reject) => {
             window.MyContract.methods.levelUpFee().call().then(function(levelUpFee) {
@@ -246,7 +227,7 @@ const MyWeb3 ={
             })
         })
     },
-    //获取僵尸喂食次数
+    //获取Patronus喂食次数
     patronusFeedTimes(_patronusId){
         return new Promise((resolve, reject) => {
             window.MyContract.methods.catFeedTimes(_patronusId).call().then(function(patronusFeedTimes) {
@@ -278,7 +259,7 @@ const MyWeb3 ={
             })
         })
     },
-    //出售我的僵尸
+    //出售我的Patronus
     saleMyPatronus(_patronusId,_price){
         return new Promise((resolve, reject) => {
             window.MyContract.methods.saleMyCat(_patronusId,window.web3.utils.toWei(_price.toString())).send({from:window.defaultAccount})
@@ -298,7 +279,7 @@ const MyWeb3 ={
             })
         })
     },
-    //获得商店里僵尸数据
+    //获得商店里Patronus数据
     patronusShop(_patronusId){
         return new Promise((resolve, reject) => {
             window.MyContract.methods.catShop(_patronusId).call().then(function(shopInfo) {
@@ -307,7 +288,7 @@ const MyWeb3 ={
             })
         })
     },
-    //获得商店所有僵尸
+    //获得商店所有Patronus
     getShopPatronuss(){
         return new Promise((resolve, reject) => {
             window.MyContract.methods.getShopCats().call().then(function(patronusIds) {
@@ -315,7 +296,7 @@ const MyWeb3 ={
             })
         })
     },
-    //购买商店里的僵尸
+    //购买商店里的Patronus
     buyShopPatronus(_patronusId,_price){
         return new Promise((resolve, reject) => {
             window.MyContract.methods.buyShopCat(_patronusId).send({from:window.defaultAccount,value:window.web3.utils.toWei(_price.toString())})
@@ -408,7 +389,7 @@ const MyWeb3 ={
             })
         })
     },
-    //获得僵尸售价
+    //获得Patronus售价
     patronusPrice(){
         return new Promise((resolve, reject) => {
             window.MyContract.methods.catPrice().call().then(function(patronusPrice) {
@@ -416,7 +397,7 @@ const MyWeb3 ={
             })
         })
     },
-    //设置僵尸售价
+    //设置Patronus售价
     setPatronusPrice(_value){
         return new Promise((resolve, reject) => {
             window.MyContract.methods.setCatPrice(window.web3.utils.toWei(_value.toString())).send({from:window.defaultAccount})
@@ -448,11 +429,11 @@ const MyWeb3 ={
             })
         })
     },
-    //新僵尸事件
+    //新Patronus事件
     EventNewPatronus(){
         return window.MyContract.events.NewCat({},{fromBlock: 0, toBlock: 'latest'})
     },
-    //出售僵尸事件
+    //出售Patronus事件
     EventSalePatronus(){
         return new Promise((resolve, reject) => {
             window.MyContract.events.SaleCat({fromBlock: 0, toBlock: 'latest'},function (error, event) {

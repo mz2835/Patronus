@@ -4,9 +4,10 @@ import PatronusKingdom from "./PatronusKingdom"
 import MyPatronus from "./MyPatronus"
 import PatronusDetail from "./PatronusDetail"
 
-import  PatronusMarket  from "./PatronusMarket"
+import PatronusMarket  from "./PatronusMarket"
 import PatronusFriend from "./PatronusFriend";
 import ContractAdmin from "./ContractAdmin"
+import Gacha from "./Gacha"
 
 class Page extends Component {
     constructor(props) {
@@ -44,7 +45,8 @@ class Page extends Component {
                 return(<PatronusDetail></PatronusDetail>)
             case 'PatronusFriend':
                 return(<PatronusFriend></PatronusFriend>)
-
+            case 'Gacha':
+                return(<Gacha></Gacha>)
             case 'ContractAdmin':
                 return(<ContractAdmin></ContractAdmin>)
             default:

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React,{Component} from 'react'
 import PatronusCard from "./PatronusCard"
 import './static/ZombiePreview.css'
 import Page from "./Page"
@@ -9,7 +9,7 @@ import {
     Link
   } from "react-router-dom"
 
-class MyPatronus extends Component {
+class Gacha extends Component {
     constructor(props) {
         super(props);
 
@@ -22,9 +22,10 @@ class MyPatronus extends Component {
             createAreaDisp:1,
             txHashDisp:0
         }
+        this.gacha=this.gacha.bind(this)
+        this.inputChange=this.inputChange.bind(this)
         this.createPatronus=this.createPatronus.bind(this)
         this.buyPatronus=this.buyPatronus.bind(this)
-        this.inputChange=this.inputChange.bind(this)
     }
         
     componentDidMount(){
@@ -32,18 +33,17 @@ class MyPatronus extends Component {
         let ethereum = window.ethereum
         if (typeof  ethereum !== 'undefined' || (typeof window.web3 !== 'undefined')) {
             MyWeb3.init().then(function(res){
-                that.myPatronuss()
+                that.getOwner()
             })
         }else {
             alert('You have to install MetaMask !')
         }
     }
     
-    myPatronuss(){
+    getOwner(){
         let that = this
         MyWeb3.getPatronussByOwner().then(function(patronuss){
             if(patronuss.length > 0){
-                
                 for(let i=0;i<patronuss.length;i++){
                     MyWeb3.patronuss(patronuss[i]).then(function (result) {
                         let _patronuss = that.state.patronuss
@@ -52,14 +52,27 @@ class MyPatronus extends Component {
                         that.setState({patronuss:_patronuss})
                     })
                 }
+            }else{
+                alert('You have to adopt a patronus first!')
             }
         })
     }
-
+    
+    gacha(){
+        let that = this
+        let _name = this.state.patronusName
+        MyWeb3.gacha(_name).then(function(transactionHash){
+            that.setState({
+                transactionHash:transactionHash,
+                buyAreaDisp:0,
+                txHashDisp:1
+            })
+        })
+    }
 
     createPatronus(){
         let that = this
-        let _name = this.state.patronusName
+        let _name = this.state.catName
         MyWeb3.createPatronus(_name).then(function(transactionHash){
             that.setState({
                 transactionHash:transactionHash,
@@ -68,6 +81,7 @@ class MyPatronus extends Component {
             })
         })
     }
+
     buyPatronus(){
         let that = this
         let _name = this.state.patronusName
@@ -79,9 +93,10 @@ class MyPatronus extends Component {
             })
         })
     }
+
     inputChange(){
         this.setState({
-            patronusName:this.input.value
+            catName:this.input.value
         })
     }
 
@@ -91,17 +106,27 @@ class MyPatronus extends Component {
         if(this.state.patronuss.length>0) {
             return ( 
                 <div className="cards">
-                    {this.state.patronuss.map((item,index)=>{
-                        var name = item.name
-                        var level = item.level
-                        return(
-                            
-                            <Link to={`?PatronusDetail&id=`+item.patronusId} key={index}>
-                                <PatronusCard patronus={item} name={name} level={level} key={index}></PatronusCard>
-                                
-                            </Link>
-                        )
-                    })}
+                    <Route path="*" component={Page}></Route>
+                    <div className='buyArea' display={this.state.buyAreaDisp}>
+                        <div className='zombieInput'>
+                            <input 
+                                type="text" 
+                                id='catName' 
+                                placeholder='Pick a name' 
+                                ref={(input)=>{this.input=input}} 
+                                value={this.state.catName}
+                                onChange={this.inputChange}>
+                            </input>
+                        </div>
+                        <div>
+                            <button className="attack-btn" onClick={this.buyPatronus}>
+                                <span>
+                                    Try Your Luck   
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div className='transactionHash' display={this.state.txHashDisp}>{this.state.transactionHash}<br></br>waiting for confirmation...</div>
                 </div>
             )
         //  have no kitty on account
@@ -111,17 +136,17 @@ class MyPatronus extends Component {
                     <div className='zombieInput'>
                         <input 
                             type="text" 
-                            id='patronusName' 
+                            id='catName' 
                             placeholder='Pick a name' 
                             ref={(input)=>{this.input=input}} 
-                            value={this.state.patronusName}
+                            value={this.state.catName}
                             onChange={this.inputChange}>
                         </input>
                     </div>
                     <div>
                         <button className="attack-btn" onClick={this.createPatronus}>
                             <span>
-                                Adopt a Patronus 
+                                Adopt a Patronus   
                             </span>
                         </button>
                     </div>
@@ -131,4 +156,4 @@ class MyPatronus extends Component {
         }
     }
 }  
-export default MyPatronus;
+export default Gacha;
